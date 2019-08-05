@@ -6,27 +6,66 @@
   <title>Work Anywhere - About</title>
 
    <link rel="icon" type="image/png" href="globe.png">
+   <link rel="stylesheet" href="stylesheet.css">
 
-  
-  <script type = "javascript">
-var delay = 1000;
-var vals = ['peach', 'mango', 'banana'];
-var input = document.getElementById('i');
 
-for (var i = 0; i < vals.length; i++) {
-    set(vals[i], i * delay);
-}
+  <script type = "text/javascript">
+  var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
 
-function set(v, d) {
-    setTimeout(function () {
-        setInterval(function () {
-            input.setAttribute('placeholder', v);            
-        }, delay * vals.length);
-    }, d);
-}
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.placeholder = this.txt;
+
+  var that = this;
+  var delta = 300 - Math.random() * 100;
+
+  if (this.isDeleting) {
+    delta /= 2;
+  }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  new TxtRotate(document.getElementById('myInput'), ['Montreal', 'Copenhagen', 'Milan', 'Brisbane', 'Hong Kong', 'Auckland', 'Lyon', 'Stockholm', 'Buenos Aires', 'Cape Town'], 500);
+};
 
 </script>
   </head>
-<input id="i" placeholder="starting" />
+
+<form action="link.php" method="post"> 
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <center><p class = 'test'> Work From
+      <input id="myInput" type="text" class="form-control conference-input" autocomplete="off">
+      <input type="submit" name="submit" id="submit" style="display: none;"/> </p></center>
+  </div>
+</form>
 
  </body>
