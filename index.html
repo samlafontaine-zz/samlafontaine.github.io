@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1008"/>
+  <title>Work Anywhere - Find the best co-working spaces in the world.</title>
+   	<script>
+        var cities = ['Montreal', 'Copenhagen', 'Milan', 'Brisbane', 'Hong Kong', 'Auckland', 'Lyon', 'Stockholm', 'Buenos Aires'];
+
+        textSequence(0);
+        function textSequence(i) {
+
+            if (cities.length > i) {
+                setTimeout(function() {
+                    document.getElementById("sequence").innerHTML = cities[i];
+                    textSequence(++i);
+                }, 1500); //1.5 seconds in miliseconds
+
+            } else if (cities.length == i) { // Loop
+                textSequence(0);
+            }
+
+        }
+    </script>
+
+   <link rel="stylesheet" href="stylesheet.css">
+   <link rel="icon" type="image/png" href="globe.png">
+ 
+ </head>
+
+ <body>
+
+  <div class="topnav" id="myTopnav">
+    <div id = "logo">
+      <img src = 'globe.png'>
+      <a href = "index.html">Work Anywhere</a></div>
+  <a href="#home" class="active">🏡 Home</a>
+  <a href="#contact">💌 Contact</a>
+  <div class="dropdown">
+    <button class="dropbtn">🗞 News 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div> 
+  <a href="about.html">✨ About</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+
+  
+   <p class = 'test'> Work from <span id="sequence"></span></p>
+
+  <center>
+  <form action="link.php" method="post"> 
+  <input type="text" name="search" id="txtName" placeholder= "Search.."/> 
+  <input type="submit" name="submit" id="submit" style="display: none;"/> 
+</form>  
+  
+  </center>
+
+  <section id="footer">
+
+   <table>
+  	<tr>
+     <td><a href = "montreal.html">Montreal</a></td>
+     <td><a href = "copenhagen.html">Copenhagen</a></td> 
+     <td><a href = "brisbane.html">Brisbane</a></td>
+     <td><a href = "hongkong.html">Hong Kong</a></td>
+     <td><a href = "capetown.html">Cape Town</a></td>
+  	</tr>
+  	<tr>
+     <td><a href = "stockholm.html">Stockholm</a></td>
+     <td><a href = "milan.html">Milan</a></td> 
+     <td><a href = "buenosaires.html">Buenos Aires</a></td>
+     <td><a href = "newyork.html">New York</a></td>
+     <td><a href = "austin.html">Austin</a></td>
+  	</tr>
+  	<tr>
+     <td><a href = "sanfrancisco.html">San Francisco</a></td>
+     <td><a href = "london.html">London</a></td> 
+     <td><a href = "tokyo.html">Tokyo</a></td>
+     <td><a href = "chiangmai.html">Chiang Mai</a></td>
+     <td><a href = "auckland.html">Auckland</a></td>
+  	</tr>
+  	<tr>
+     <td><a href = "dublin.html">Dublin</a></td>
+     <td><a href = "paris.html">Paris</a></td> 
+     <td><a href = "saopaulo.html">Sao Paulo</a></td>
+     <td><a href = "chicago.html">Chicago</a></td>
+     <td><a href = "mexicocity.html">Mexico City</a></td>
+  	</tr>
+   </table>
+
+  </section>
+
+ </body>
+
+    
