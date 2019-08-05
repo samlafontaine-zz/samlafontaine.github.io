@@ -9,9 +9,7 @@ html, body {
 .test {
     color: #403f4c;
     font-size: 550%;
-    text-align: left;
-    padding-top: 100px;
-    padding-left: 100px;
+    padding-top:5%;
     width:100%;
 }
 
@@ -218,7 +216,6 @@ input[type=text] {
   border:0;
   border-bottom: 1px solid;
   border-bottom-color: #403f4c;
-  position:relative;
 }
 
 input[type=text]:focus {
