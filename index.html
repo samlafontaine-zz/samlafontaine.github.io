@@ -1,1 +1,101 @@
-Hello World
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1008"/>
+  <title>Work Anywhere</title>
+   	<script>
+        var cities = ['Montreal', 'Copenhagen', 'Milan', 'Brisbane', 'Hong Kong', 'Auckland', 'Lyon', 'Stockholm', 'Buenos Aires'];
+
+        textSequence(0);
+        function textSequence(i) {
+
+            if (cities.length > i) {
+                setTimeout(function() {
+                    document.getElementById("sequence").innerHTML = cities[i];
+                    textSequence(++i);
+                }, 1500); //1.5 seconds in miliseconds
+
+            } else if (cities.length == i) { // Loop
+                textSequence(0);
+            }
+
+        }
+    </script>
+
+   <link rel="stylesheet" href="stylesheet.css">
+   <link rel="icon" type="image/png" href="globe.png">
+ 
+ </head>
+
+ <body>
+
+  <div class="topnav" id="myTopnav">
+    <div id = "logo">
+      <img src = 'globe.png'>
+      <a href = "testing.html">Work Anywhere</a></div>
+  <a href="#home" class="active">🏡 Home</a>
+  <a href="#contact">💌 Contact</a>
+  <div class="dropdown">
+    <button class="dropbtn">🗞 News 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div> 
+  <a href="about.html">✨ About</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+
+  
+   <p class = 'test'> Work from <span id="sequence"></span></p>
+
+  <center>
+  <form action="link.php" method="post"> 
+  <input type="text" name="search" id="txtName" placeholder= "Search.."/> 
+<input type="submit" name="submit" id="submit" value="Search"/> 
+</form>  
+  
+  </center>
+
+  <section id="footer">
+
+   <table>
+  	<tr>
+     <td><a href = "montreal.html">Montreal</a></td>
+     <td>Copenhagen</td> 
+     <td>Brisbane</td>
+     <td>Hong Kong</td>
+     <td>Cape Town</td>
+  	</tr>
+  	<tr>
+     <td>Stockholm</td>
+     <td>Milan</td> 
+     <td>Buenos Aires</td>
+     <td>New York</td>
+     <td>Austin</td>
+  	</tr>
+  	<tr>
+     <td>San Francisco</td>
+     <td>London</td> 
+     <td>Tokyo</td>
+     <td>Chiang Mai</td>
+     <td>Auckland</td>
+  	</tr>
+  	<tr>
+     <td>Dublin</td>
+     <td>Paris</td> 
+     <td>Sao Paulo</td>
+     <td>Chicago</td>
+     <td>Mexico City</td>
+  	</tr>
+   </table>
+
+  </section>
+
+ </body>
+
+    
