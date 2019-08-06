@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
+html  {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+
+    margin: 0 0 100px;
+    padding:5px;
     font-family: "Lato", Helvetica, Arial, sans-serif;
 }
 
@@ -17,7 +23,7 @@ html, body {
     color: gray;
     font-size: 300%;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 5px;
     padding-bottom: 20px;
 }
 
@@ -57,8 +63,9 @@ table {
     font-size: 100%;
     position: relative;
     width:100%; 
-    padding-top: 2%;
-    padding-bottom: 2%;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
     border-spacing: 5px;
 }
 
@@ -68,12 +75,14 @@ table {
     height:100px;
 }
 
-#footer {
+footer {
     background-color: #90CCF4;
-    width: 100%;
-    position: fixed;
+    position: absolute;
     left: 0;
     bottom: 0;
+    height: 130px;
+    width: 100%;
+    overflow: hidden;
     text-align: center;
 }
 
@@ -219,12 +228,32 @@ input[type=text] {
 }
 
 input[type=text]:focus {
-  width: 40%;
+  width: 35%;
 }
 
 *:focus {
     outline: none;
 }
 
+input[type=topsearch] {
+  width: 100px;
+  color: #403f4c;
+  font-size:100%;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;  
+  background: transparent;
+  border: 1px solid;
+  border color: #403f4c;
+  float: right;
+  display: block;
+}
+
+input[type=topsearch]:focus {
+  width: 10%;
+}
+
+.topsearchbar {
+  padding-top: 19px;
+}
 
 
