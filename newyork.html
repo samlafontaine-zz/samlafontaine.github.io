@@ -11,27 +11,39 @@
 
  <body>
 
- <div class="topnav" id="myTopnav">
-        <div id="logo">
-            <img src='globe.png'>
-            <a href="index.html">Remote Spaces</a></div>
-        <a href="index.html">🏡 Home</a>
-        <a href="#contact">💌 Contact</a>
-        <div class="dropdown">
-            <button class="dropbtn">👉 List a Space
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-            </div>
-        </div>
-        <a href="about.html">✨ About</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-    </div>
+ <script src="https://kit.fontawesome.com/c91173721c.js"></script>
 
-  <section id = "blank"></section>
+  <nav class="navbar">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </span>
+        <a href="#" class="logo">🌐Remote Spaces</a>
+        <ul class="main-nav" id="js-menu">
+            <li>
+                <a href="about.html" class="nav-links">✨ About</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">👉 List a Space</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">💌 Contact</a>
+            </li>
+            <li>
+                <a href="index.html" class="nav-links">🏡 Home</a>
+            </li>
+        </ul>
+    </nav>
+
+    <script type="text/javascript">
+        let mainNav = document.getElementById('js-menu');
+        let navBarToggle = document.getElementById('js-navbar-toggle');
+
+        navBarToggle.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+        });
+    </script>
+
+     <section id = "blank"></section>
   
   <div class = "city-header"> New York </div>
 
@@ -40,7 +52,7 @@
    <iframe width="800" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=montreal&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
   </center>
 -->
-  <section id = "blank"></section>
+ 
 
   <footer>
         <table>
