@@ -144,6 +144,7 @@ footer {
         margin-right: 30px;
         flex-direction: row;
         justify-content: flex-end;
+        float: none;
     }
     .main-nav li {
         margin: 0;
