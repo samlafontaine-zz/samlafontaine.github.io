@@ -66,6 +66,7 @@ table {
     padding-top: 1%;
     padding-bottom: 1%;
     border-spacing: 5px;
+    text-decoration: none;
 }
 
 #blank {
@@ -83,6 +84,7 @@ footer {
     width: 100%;
     overflow: hidden;
     text-align: center;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 600px) {
