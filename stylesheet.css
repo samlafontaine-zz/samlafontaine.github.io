@@ -131,6 +131,11 @@ footer {
   display: block;
 }
 
+footer {
+  display:none;
+}
+
+
 @media screen and (min-width: 600px) {
     .navbar {
         display: flex;
@@ -162,16 +167,24 @@ footer {
     .nav-links:hover {
         color: rgba(255, 255, 255, 1);
     }
-    .footer{
-    visibility: hidden;
-    display: none;
-  }
+
     .test {
     color: #403f4c;
     font-size: 550%;
     padding-top:5%;
     width:100%;
-}
+    }
+
+    footer {
+    background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf   100%);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 130px;
+    width: 100%;
+    text-align: center;
+    display:block;
+  }
 
 
 input[type=text] {
