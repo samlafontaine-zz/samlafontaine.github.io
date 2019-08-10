@@ -13,7 +13,7 @@ body {
 
 .test {
     color: #403f4c;
-    font-size: 550%;
+    font-size: 200%;
     padding-top:5%;
     width:100%;
 }
@@ -166,6 +166,11 @@ footer {
     visibility: hidden;
     display: none;
   }
+    .test {
+    color: #403f4c;
+    font-size: 550%;
+    padding-top:5%;
+    width:100%;
 }
 
 
@@ -183,10 +188,7 @@ input[type=text] {
 
 input[type=text]:focus {
   width: 35%;
-}
-
-*:focus {
-    outline: none;
+  outline: none;
 }
 
 input[type=topsearch] {
