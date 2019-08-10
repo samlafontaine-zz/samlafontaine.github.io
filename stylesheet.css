@@ -131,7 +131,7 @@ footer {
   display: block;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 600px) {
     .navbar {
         display: flex;
         justify-content: space-between;
@@ -162,7 +162,7 @@ footer {
     .nav-links:hover {
         color: rgba(255, 255, 255, 1);
     }
-    #footer{
+    .footer{
     visibility: hidden;
     display: none;
   }
